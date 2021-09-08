@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import Gomb from './Gomb';
+import Fal from './Fal';
 
 class App extends React.Component {
   state = { egAVillany: false };
@@ -13,10 +14,13 @@ class App extends React.Component {
     };
 
     return (
-      <div>
-        <Gomb text={this.state.egAVillany ? "OFF" : "ON"} 
-        switchIt={turnIt} egAVillany={this.state.egAVillany} />
-      </div>
+      <Fal  vanFeny={this.state.egAVillany}>
+        <Gomb
+          text={this.state.egAVillany ? 'OFF' : 'ON'}
+          switchIt={turnIt}
+          egAVillany={this.state.egAVillany}
+        />
+      </Fal>
     );
   }
 }
